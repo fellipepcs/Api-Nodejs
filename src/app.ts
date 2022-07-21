@@ -3,6 +3,7 @@ import cors from 'cors';
 import mongoose, { ConnectOptions } from "mongoose";
 import CodigoAcessoRouter from './routers/codigo_acesso.routers';
 import ContatoRouter from './routers/contato.routers';
+import ProprietarioRouter from './routers/proprietario.routers'
 
 
 export class App {
@@ -40,6 +41,7 @@ export class App {
     private routers(): void {
         this.express.use('/api', CodigoAcessoRouter);
         this.express.use('/api', ContatoRouter);
+        this.express.use('/api', ProprietarioRouter);
     }
 
 }
